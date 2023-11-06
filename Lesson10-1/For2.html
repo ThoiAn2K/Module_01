@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id='Display'></p>
+
+    <script>
+        let Total = 0 ;
+        let Number = +prompt('nhap so ban muon:');
+        for (let i = 1 ; i <= Number ; i++) {
+            Total += i ;
+        }
+        document.getElementById('Display').innerHTML = 'tong cac phan tu:' + Total + '<br>';
+    </script>
+</body>
+</html>

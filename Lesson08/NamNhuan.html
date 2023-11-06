@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var year = parseInt(prompt('Enter a year'));
+        var isleapyear = false;
+
+        var year4 = year % 4 == 0;
+        if (year4){
+            var year100 = year % 100 == 0;
+            if (year100){
+                var year400 = year % 400 == 0;
+                if (year400){isleapyear= true;}} 
+        else {isleapyear = true;}
+                 }
+        if (isleapyear) {alert(year + " is a leap year ");}
+        else {alert(year + " is not a leap year ");}
+
+    </script>
+</body>
+</html>

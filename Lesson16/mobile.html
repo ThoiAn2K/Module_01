@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Mobile{
+            constructor(){
+                    this.baterry = 100;
+                    this.memoryMessage = '';
+                    this.inbox = '';
+                    this.sentMessage = '';
+                    this.infoPower = false;
+                }
+                checkBattery(){
+                    return this.baterry;
+                }
+                turnOn(){
+                    if(!this.infoPower){
+                        this.infoPower = true;
+                        console.log('điện thoại xịn nhất thế giới đã được khởi động');
+                    }
+                        else { console.log('Sao bạn lại tắt để tôi bơ vơ trong màn đêm tụt tụt ..tụt..');
+
+                        }
+                    }
+                turnOff(){
+                    if (this.infoPower){
+                        this.infoPower = false;
+                        console.log('điện thoại đã tắt');
+                    }
+                    else {
+                        console.log('điện thoại đã được tắt trước đó');
+                    }
+                }
+                chargeBattery(){
+                    if ( this.baterry < 100){
+                        this.baterry += 1;
+                        console.log('điện thoại đang được sạc pin' + this.baterry + "%");
+                    } else {
+                        console.log('điện thoại đầy pin: 100%');
+                    }
+                }
+                Massage(message){
+                    if (this.infoPower){
+                        this.memoryMessage = message;
+                        console.log('tin nhắn bạn đã soan: ' , this.memoryMessage);
+                        this.baterry -= 1;
+                    } else {
+                        console.log('điện thoại chưa được khởi động');
+                    }
+                }
+                receiveMessage(message){
+                    if (this.infoPower){
+                        this.inbox =message;
+                        console.log('tin nhắn đã nhận: ' + message );
+                    }
+                    else {
+                        console.log('chưa khởi động điện thoại thì sao sử dụng được bạn');
+                    }
+                }
+                SentMessage(message, mobile){
+                    if(this.infoPower){
+                        if(mobile.infoPower){
+                          mobile.receiveMessage(message);
+                          this.SentMessage = message;
+                          console.log('Tin nhắn đã được gửi đi là', mobile);
+                          this.baterry -= 1;
+                        } else {
+                          console.log(mobile, 'chưa khởi điện thoại mà lì ghê á');
+                        }
+                    }
+                }
+                 viewInbox() {
+                     if (this.infoPower) {
+                        console.log('Hộp thư đến:', this.inbox);
+                        this.battery -= 1;
+                       } else {
+                        console.log('Điện thoại chưa được bật.');
+                    }
+                 }
+
+                    viewMessage(){
+                        if ( this.infoPower){
+                            console.log('Tin nhắn đã gửi:' , this.SentMessage);
+                            this.battery -= 1 ;
+
+                        } else {
+                            console.log('tui chưa được khởi động bạn ơi');
+                        }
+                    }
+                    }
+let Nokia = new Mobile();
+let Iphone = new Mobile();
+
+Nokia.turnOn();
+Iphone.turnOn();
+
+Nokia.Massage('Do you want plays game with me ?');
+Nokia.SentMessage(Nokia.memoryMessage, Iphone);
+
+Iphone.viewInbox();
+
+console.log('Pin Nokia:', Nokia.checkBattery());
+console.log('Pin iPhone:', Iphone.checkBattery());
+
+
+
+                 
+
+            
+        
+    </script>
+</body>
+</html>

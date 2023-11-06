@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number1 = +prompt('Enter number 1');
+        let number2 = +prompt('Enter number 2');
+        let number3 = +prompt('Enter number 3');
+        let arr = [];
+        let min = 0;
+        arr.push(number1,number2,number3)
+        function CheckNumber(arr) {
+            for (i=0; i < arr.length; i++){
+                min = arr[i] ;
+                if ( min > arr[i]) {
+                    min = arr[i] }
+                return min
+
+            }       
+        }
+    document.write(CheckNumber(arr))
+        
+       
+ 
+
+    </script>
+</body>
+</html>

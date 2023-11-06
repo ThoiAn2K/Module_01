@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100%;
+        }
+       
+    </style>
+
+</head>
+<body>
+    <table border="1">
+
+        <tr>
+            <th colspan="4">
+           <input type="text" id="display" colspan="4" style="height: 20px;">
+        </th>
+        </tr>
+        <tr>
+            <td >
+            <button type="button"  onclick="so(value)" value="1">1</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="2">2</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="3">3</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="+">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td >
+            <button type="button" onclick="so(value)"  value="4">4</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="5">5</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="6">6</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="-"> - </button>
+            </td> 
+        </tr>
+        <tr>
+            <td >
+            <button type="button" onclick="so(value)"  value="7">7</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="8">8</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="9">9</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="*">x</button>
+            </td> 
+        </tr>
+        <tr>
+            <td >
+            <button type="button" onclick="del()"  value="C">C</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="0">0</button>
+            </td>
+            <td >
+            <button type="button" onclick="result();"  value="=">=</button>
+            </td>
+            <td >
+            <button type="button" onclick="so(value)"  value="/">/</button>
+            </td> 
+      
+    </table>
+
+
+    <script>
+var display = document.getElementById("display");
+function so(value){
+display.value = display.value + value;
+}
+function result()
+{
+let result = eval(display.value);
+    display.value = result;
+}
+function del()
+{
+display.value = "";
+}
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img style="width: 50%;" id="action1" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg" onclick="click1()">
+    <img style="width: 50%;" id="action2" src="http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg" onclick="click2()">
+    <img style="width: 50%;" id="action3" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg" onclick="click3()">
+    <img style="width: 50%;" id="action4" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg" onclick="click4()">
+    <img style="width: 50%;" id="action5" src="http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg" onclick="click5()">
+</body>
+<script>
+let cat1 = "http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg";
+let cat2 = "http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg";
+let cat3 = "http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg";
+let cat4 = "http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg";
+let cat5 = "http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg";
+
+let panda1 = "http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg";
+let panda2 = "http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg";
+let panda3 = "http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg";
+let panda4 = "http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg";
+let panda5 = "http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg";
+
+let monkey1 = "http://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg";
+let monkey2 = "http://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg";
+let monkey3 = "http://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg";
+let monkey4 = "http://demo.codegym.vn/8/puzzlegame/img/monkey_part4x1.jpg";
+let monkey5 = "http://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg";
+
+let action1 = document.getElementById('action1');
+let action2 = document.getElementById('action2');
+let action3 = document.getElementById('action3');
+let action4 = document.getElementById('action4');
+let action5 = document.getElementById('action5');
+
+
+function click1(){
+    switch (action1.src) {
+        case cat1:
+            action1.src = panda1;
+            break;
+        case panda1:
+            action1.src = monkey1;
+            break;
+        case monkey1:
+            action1.src = cat1;
+            break;
+        default:
+            break;
+    }
+}
+function click2(){
+    switch (action2.src) {
+        case cat2:
+        action2.src = monkey2;
+            break;
+        case panda2:
+        action2.src = cat2;
+            break;
+        case monkey2:
+        action2.src = panda2;
+            break;
+        default:
+            break;
+    }
+}
+function click3(){
+    switch (action3.src) {
+        case cat3:
+        action3.src = panda3;
+            break;
+        case panda3:
+        action3.src = monkey3;
+            break;
+        case monkey3:
+        action3.src = cat3;
+            break;
+        default:
+            break;
+    }
+}
+function click4(){
+    switch (action4.src) {
+        case cat4:
+        action4.src = panda4;
+            break;
+        case panda4:
+        action4.src = monkey4;
+            break;
+        case monkey4:
+        action4.src = cat4;
+            break;
+        default:
+            break;
+    }
+}
+function click5(){
+    switch (action5.src) {
+        case cat5:
+        action5.src = panda5;
+            break;
+        case panda5:
+        action5.src = monkey5;
+            break;
+        case monkey5:
+        action5.src = cat5;
+            break;
+        default:
+            break;
+    }
+}
+function win(){
+if (action1.src == panda1 && action2.src == panda2 && action3.src == panda3 && action4.src == panda4 && action5.src == panda5 )
+alert('win')
+else if (action1.src == monkey1 && action2.src == monkey2 && action3.src == monkey3 && action4.src == monkey4 && action5.src == monkey5 )
+alert('win')
+else if (action1.src == cat1 && action2.src == cat2 &&action3.src == cat3 && action4.src == cat4 && action5.src == cat5 ) 
+alert('win')}
+window.addEventListener('click',win)
+</script>
+
+</html>

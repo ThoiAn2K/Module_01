@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const number =prompt('Enter your Number');
+        var str = number.toString();
+        var A = [str[0]];
+        for (var i = 1; i < str.length ; i++){
+            if (str[i-1]%2 === 0 && str[i]%2 === 0)
+            {
+                 A.push('-', str[i]);
+            }
+            else 
+            {
+                A.push(str[i]);
+            }
+        }
+        console.log(A.join(''));
+
+
+
+    </script>
+</body>
+</html>

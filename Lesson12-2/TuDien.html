@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Nhap Tu</span>
+    <input type="text" id="string" >
+    <input type="button"  onclick="Dich()" value="Dich">
+    <p id="result"></p>
+</body>
+<script>
+   
+    function Dich() {
+    let A = ['Banana','Apple'];
+    let B = ['Chuối','Táo'];
+    let C = document.getElementById("string").value;
+    let D = '';
+    let result ='';
+       for (let i = 0 ; i < A.length; i++){
+        if ( C == A[i]){
+              D = i; 
+              for ( let j = 0 ; j < B.length; j++){
+                if(D == j){ result = B[j];
+                }
+              }
+        }
+       }
+       document.getElementById('result').innerHTML = result
+}
+    
+</script>
+</html>

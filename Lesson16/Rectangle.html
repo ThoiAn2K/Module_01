@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <canvas id="canvas1" width="600" height="80"></canvas>
+    <p id="location"></p>
+    </div>
+    <script>
+        
+            function Rectangle(width ,height){
+                this.width = width;
+                this.height = height;
+            
+                this.getArea = function() {
+                    return this.width * this.height};
+                this.getPerimeter = function() {
+                    return  2 * (this.width + this.height)};
+                this.getWidth = function (){
+                    return this.width;
+                }
+                this.getHeight = function() {
+                    return this.height;
+                }
+                this.setWidth = function(width){
+                    this.width = width;
+                }
+                this.setHeight = function(height){
+                    this.height = height;
+                }       
+            };
+    var myRectangle = new Rectangle(20,50);
+
+    myRectangle.setWidth(100);
+    myRectangle.setHeight(60);
+
+    let width = myRectangle.getWidth();
+    let height = myRectangle.getHeight();
+ 
+    let canvas = document.getElementById("canvas1");
+    let ctx = canvas.getContext('2d');
+    ctx.fillStyle='#fa4b2a';
+    ctx.fillRect(10, 10, width, height)
+
+    document.getElementById('location').innerHTML = 'With Width: ' + width + ' and ' + 'Height: ' + height + '<br>' +'Area of Rectangle : '+ myRectangle.getArea() + 
+    '<br>' + 'Perimeter of Rectangle : ' + myRectangle.getPerimeter();
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style></style>
+<body>
+<h1 style="position:absolute; left:220px; top:150px;">Do you love me ?</h1>
+<button onclick="Yes()" style="position:absolute; left:285px; top:235px;">Yes</button>
+<input type="button" onmouseover="Mouse()" value="No" id="M" style="position:absolute; left:350px; top:235px;">
+</body>
+<script>
+    function Yes(){ alert('congratulations! are you right <3') };
+    function Mouse(){
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('M').style.left = x + 'px';
+        document.getElementById('M').style.top = y + 'px';
+    }
+</script>
+</html>

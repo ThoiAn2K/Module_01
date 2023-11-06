@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let inputNumber= +prompt('input number you want');
+        isPrime(inputNumber)
+        function isPrime(inputNumber){
+            let count = 0;
+            for ( i = 1  ; i <= inputNumber; i++)
+            { if (inputNumber % i == 0){ 
+                count += 1;}
+            }
+
+                if (count==2){
+                    alert(inputNumber + "la so nguyen to")}
+                else 
+                {alert(inputNumber + " khong la so nguyen to")}
+            }
+                
+            
+        
+    
+
+      
+    </script>
+</body>
+</html>

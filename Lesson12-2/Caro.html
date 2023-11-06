@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="makeup">
+    <p>Caro Game Simple</p>
+    <p id="carogame"></p>
+    <input type="button" value="Change Value" onclick="InputValue()" >
+</div>
+    
+    <script>
+        var Dem = 1;
+        var data = '';
+        var CaroTable = [];
+        for ( let i = 0; i < 5 ; i++) {
+            CaroTable[i] = new Array ('( )' , '( )' , '( )' , '( )' , '( )');
+        }
+        for ( let i = 0; i < 5; i++){
+            data += '<br/>';
+            for (let j = 0; j < 5 ; j++){
+            data += CaroTable[i][j] + " " ;
+        }
+        }
+    document.getElementById("carogame").innerHTML = data;
+
+        function InputValue(){
+        let InputValueX = +prompt('Input value of X');
+        let InputValueY = +prompt('Input Value of Y');
+        data = '';
+        if (Dem %2 ==0){
+        CaroTable [InputValueX][InputValueY] = "X" ;}
+        else if (CaroTable [InputValueX][InputValueY] = "O" );
+        Dem++
+        for ( let i = 0; i < 5; i++){
+            data += '<br/>';
+            for (let j = 0; j < 5 ; j++){
+            data += CaroTable[i][j] + " " ;
+        }
+        }
+        document.getElementById("carogame").innerHTML = data;
+    }
+    for(let i=0; i<5; i++){
+                for (let j=0; j<5; j++){
+    if (CaroTable[i][j] === "X" && CaroTable[i][j+1] === "X" && CaroTable[i][j+2] === "X" && CaroTable[i][j+3] === "X" && CaroTable[i][j+4] === "X" ||
+         CaroTable[i][j] === "X" && CaroTable[i+1][j] === "X" && CaroTable[i+2][j] === "X" && CaroTable[i+3][j] === "X" && CaroTable[i+4][j]==="X" ) {
+        alert('X win');}
+        else if( CaroTable[i][j] === "O" && CaroTable[i+1][j] === "O" && CaroTable[i+2][j] === "O" && CaroTable[i+3][j] === "O" && CaroTable[i+4][j] ==="O"||
+            CaroTable[i][j] === "O" && CaroTable[i][j+1] === "O" && CaroTable[i][j+2] === "O" && CaroTable[i][j+3] === "O" && CaroTable[i][j+4] === "O" ){
+        alert('O win');  
+    }
+}
+}
+</script>
+<style>
+ .makeup { text-align: center;}
+    
+</style>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="docReady()">
+    <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position:absolute;left:0; top:0; " height="100" width="80"/>
+<script> 
+var element = document.getElementById("nobita")
+    function Up() {
+        element.style.top = parseInt(element.style.top) - 5 + 'px'; 
+    }
+    function Down() {
+        element.style.top = parseInt(element.style.top) + 5 + 'px'; 
+    }
+    function left() {
+        element.style.left = parseInt(element.style.left) - 5 + 'px'; 
+    }
+    function right() {
+        element.style.left = parseInt(element.style.left) + 5 + 'px'; 
+    }
+
+
+
+function move(evt){
+    switch (evt.keyCode) {
+        case 38:
+            Up();
+            break;
+        case 40:
+            Down();
+            break;
+        case 37:
+            left();
+            break;
+        case 39:
+            right();
+            break;
+
+}
+}
+function docReady() {
+    window.addEventListener('keydown', move);
+}
+</script>
+</body>
+</html>

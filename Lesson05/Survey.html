@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+</head>
+<body>
+    <form action="http://My-Web" method="post">
+    <h3>What is your age range?</h3>
+    <select name="range" id="range">
+    <option value="range">18-24     </option>
+    <option value="range">25-34     </option>
+    <option value="range">35-40     </option>
+    <option value="range">50+       </option>
+   </select>
+
+    <h3>What is your yearly income range?</h3>
+    <select name="income" id="income">
+        <option value="income">$0 - $25,000     </option>
+        <option value="income">$25,001 - $50,000     </option>
+        <option value="income">$50,001 - $100,000     </option>
+        <option value="income">$100,000+       </option>
+       </select>
+    <h3>Gender Identity</h3>
+    <input type="radio" name="gioitinh" value="Male"> Male
+    <br>
+    <input type="radio" name="gioitinh" value="Female"> Female
+    <br>
+    <input type="radio" name="gioitinh" value="Nonbinary"> Nonbinary
+    <br>
+    <input type="radio" name="gioitinh" value="other"> Other
+    
+    <h3>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h3>
+     <input type="checkbox" name="checkbox" value="1"> Product 1 <br>
+     <input type="checkbox" name="checkbox" value="2"> Product 2 <br>
+     <input type="checkbox" name="checkbox" value="3"> Product 3 <br>
+
+     <h3>How often would you use our new product?</h3>
+    <input type="radio" name="time" > Daily <br>
+    <input type="radio" name="time" > Weekly <br>
+    <input type="radio" name="time" > Monthly
+
+    <h3>What would you pay for the new product?</h3>
+    $<input type="number" pattern="^\d+(\.|\,)\d{2}$"> . <input type="number" pattern="^\d+(\.|\,)\d{2}$">
+
+
+    <h3>What features would you like to see in the new product.</h3>
+    <input type="text">
+    <h3>Please rate your level of agreement with the following statements.</h3>
+    <table border="1" style="border-collapse: collapse;">
+        <TR>
+            <th style="background-color: rgb(141, 134, 125);"></th>
+            <th style="background-color: rgb(141, 134, 125);">Strongly Disagree</th>
+            <th style="background-color: rgb(141, 134, 125);">Disagree</th>
+            <th style="background-color: rgb(141, 134, 125);">Agree</th>
+            <th style="background-color: rgb(141, 134, 125);">Strongly Agree</th>
+        </TR>
+        <tr>
+            <th rowspan="2" align="left">Our products are priced fairly.</th>
+            <td align="center"> 
+                <input type="radio" name="level">
+            </td >
+            <td align="center">
+                <input type="radio" name="level">
+            </td>
+            <td align="center">
+                <input type="radio" name="level">
+            </td>
+            <td align="center">
+                <input type="radio" name="level">
+            </td>
+        <tr>
+            <td align="center" style="border-top: hidden;">1</td>
+            <td align="center" style="border-top: hidden;">2</td>
+            <td align="center" style="border-top: hidden;">3</td>
+            <td align="center" style="border-top: hidden;">4</td>
+        </tr>
+        <tr>
+            <th rowspan="2" align="left" style="background-color: rgb(141, 134, 125);">Our products are high quality.</th>
+            <td align="center" style="background-color:rgb(141, 134, 125); "> 
+                <input type="radio" name="level">
+            </td >
+            <td align="center" style="background-color:rgb(141, 134, 125); ">
+                <input type="radio" name="level">
+            </td>
+            <td align="center" style="background-color:rgb(141, 134, 125); ">
+                <input type="radio" name="level">
+            </td>
+            <td align="center" style="background-color:rgb(141, 134, 125); ">
+                <input type="radio" name="level">
+            </td>
+        <tr>
+            <td align="center" style="border-top: hidden; background-color:rgb(141, 134, 125) ;" >1</td>
+            <td align="center" style="border-top: hidden; background-color:rgb(141, 134, 125) ;">2</td>
+            <td align="center" style="border-top: hidden; background-color:rgb(141, 134, 125) ;">3</td>
+            <td align="center" style="border-top: hidden; background-color:rgb(141, 134, 125) ;">4</td>
+        </tr>
+        <tr>
+            <th rowspan="2" align="left">You would recommend our product to a friend or coworker.</th>
+            <td align="center" >
+                <input type="radio" name="level">
+            </td >
+            <td align="center">
+                <input type="radio" name="level">
+            </td>
+            <td align="center">
+                <input type="radio" name="level">
+            </td>
+            <td align="center">
+                <input type="radio" name="level">
+            </td>
+        <tr>
+            <td align="center" style="border-top: hidden;">1</td>
+            <td align="center" style="border-top: hidden;">2</td>
+            <td align="center" style="border-top: hidden;">3</td>
+            <td align="center" style="border-top: hidden;">4</td>
+        </tr>
+        
+    </table>
+    <br>
+    <input type="submit" name="submit" value="submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            Celsius;
+            constructor(Celsius){
+            this.Celsius = Celsius;
+            }
+            fahrenheit() {
+                return this.Celsius * 9/5 + 32 
+            }
+            kenvin(){
+                return this.Celsius + 273.15
+            }
+        };
+        let myTemperature = new Temperature(25);
+        let fahrenheit = myTemperature.fahrenheit();
+        let kenvin = myTemperature.kenvin();
+
+        document.write('Fahrenheit: ' + fahrenheit + ' F ' +'<br>' + 'Kenvin: ' + kenvin + ' K')
+    
+    
+    </script>
+</body>
+</html>

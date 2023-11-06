@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh so can nang</title>
+</head>
+<body>
+    <label for="weight">Input Weight (kg) : </label>
+    <input type="text" id="weight">
+    <br>
+    <br>
+    <label for="height">Input Height (m) : </label>
+    <input type="text" id="height">
+    <BR></BR>
+    <button onclick="KQ()" id="KQ">KQ</button>
+
+    <br>
+    <P id="result"></P>
+    <script>
+    function KQ() {
+    let height = document.getElementById("height").value;
+    let weight = document.getElementById("weight").value;
+    let BMI = weight / (height ^ 2);
+    let result = "";
+
+       if (BMI < 18.5) result = "Underweight"
+       else if (BMI <= 25.0) result = "Normal"
+       else if (BMI <= 30.0) result = "Overweight"
+       else if (BMI >= 30.0) result = "Obese"
+
+       document.getElementById("result").innerHTML = "KQ :" + result ;
+    }
+    </script>
+</body>
+</html>

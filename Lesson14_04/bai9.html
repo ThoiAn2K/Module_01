@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1 = [ 'BMW', 'TOYOTA', 'SYM', 'BMW']
+        let arr2 = prompt('enter text you want')
+        let count = 0;
+        let index = 0
+        check_text()
+        function check_text(){
+            for (let i = 0; i < arr1.length; i++) {
+                if ( arr2 == arr1[i] ){ count++
+            }  
+        } if (count > 0 ) {
+            alert(count)
+        } else {
+            alert('-1')
+        }
+       }
+    </script>
+</body>
+</html>

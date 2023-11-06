@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="makeup">
+    <p>Caro Game Simple</p>
+    <p id="carogame"></p>
+    <input type="button" value="Change Value" onclick="InputValue()" >
+</div>
+    
+    <script>
+        var Dem = 1;
+        var data = '';
+        var CaroTable = [];
+        for ( let i = 0; i < 5 ; i++) {
+            CaroTable[i] = new Array ('( )' , '( )' , '( )' , '( )' , '( )');
+        }
+        for ( let i = 0; i < 5; i++){
+            data += '<br/>';
+            for (let j = 0; j < 5 ; j++){
+            data += CaroTable[i][j] + " " ;
+        }
+        }
+    document.getElementById("carogame").innerHTML = data;
+
+        function InputValue(){
+        let InputValueX = +prompt('Input value of X');
+        let InputValueY = +prompt('Input Value of Y');
+        data = '';
+        if (Dem %2 ==0){
+        CaroTable [InputValueX][InputValueY] = "X" ;}
+        else if (CaroTable [InputValueX][InputValueY] = "O" );
+        Dem++
+        for ( let i = 0; i < 5; i++){
+            data += '<br/>';
+            for (let j = 0; j < 5 ; j++){
+            data += CaroTable[i][j] + " " ;
+        }
+        }
+        document.getElementById("carogame").innerHTML = data;
+    }
+
+</script>
+<style>
+ .makeup { text-align: center;}
+    
+</style>
+</body>
+</html>
